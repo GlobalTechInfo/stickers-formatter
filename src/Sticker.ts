@@ -7,7 +7,7 @@ import Exif from './internal/Metadata/Exif'
 import { StickerTypes } from './internal/Metadata/StickerTypes'
 import { Categories, extractMetadata } from '.'
 import { Color } from 'sharp'
-import { fromBuffer } from 'file-type'
+import { fileTypeFromBuffer } from 'file-type'
 
 export class Sticker {
     constructor(private data: string | Buffer, public metadata: Partial<IStickerOptions> = {}) {
@@ -31,7 +31,7 @@ export class Sticker {
     }
 
     private _getMimeType = async (data: Buffer): Promise<string> => {
-        const type = await fromBuffer(data)
+        const type = await fileTypeFromBuffer(data)
         if (!type) {
             if (typeof this.data === 'string') return 'image/svg+xml'
             throw new Error('Invalid file type')
@@ -101,4 +101,3 @@ export class Sticker {
 
 export const createSticker = async (...args: ConstructorParameters<typeof Sticker>): Promise<Buffer> =>
     new Sticker(...args).build()
-    
