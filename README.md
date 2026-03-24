@@ -12,6 +12,7 @@ A feature-rich fork of [wa-sticker-formatter](https://github.com/AlenVelocity/wa
 [![Code Quality](https://img.shields.io/codefactor/grade/github/GlobalTechInfo/stickers-formatter?style=flat-square&label=Code%20Quality)](https://www.codefactor.io/repository/github/GlobalTechInfo/stickers-formatter)
 [![Downloads](https://img.shields.io/npm/dw/stickers-formatter?style=flat-square&label=Downloads&color=green)](https://npmjs.com/package/stickers-formatter)
 [![NPM Version](https://img.shields.io/npm/v/stickers-formatter?style=flat-square&label=Version&color=red)](https://npmjs.com/package/stickers-formatter)
+[![GitHub Attestations](https://img.shields.io/github/check-runs/GlobalTechInfo/stickers-formatter/main?label=provenance&logo=github)](https://github.com/GlobalTechInfo/stickers-formatter/attestations)
 
 </div>
 
