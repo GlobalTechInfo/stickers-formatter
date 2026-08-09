@@ -6,8 +6,8 @@ import sharp from 'sharp'
 
 const images = {
     static: {
-        potrait: 'https://i.pinimg.com/originals/3a/53/d6/3a53d68345b56241a875595b21ec2a59.jpg',
-        landscape: 'https://chasinganime.com/wp-content/uploads/2021/02/0_YgtEypuJ2QfMPCbn.jpg'
+        potrait: 'https://picsum.photos/seed/sticker-portrait/768/1024',
+        landscape: 'https://picsum.photos/seed/sticker-landscape/1024/768'
     },
     animated: {
         potrait: 'https://c.tenor.com/-1mtmQgH5eYAAAAC/watson-amelia-vtuber.gif',
