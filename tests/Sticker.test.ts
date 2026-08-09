@@ -2,7 +2,7 @@
 /// <reference path='../src/internal/node-webpmux.d.ts' />
 import { strict as assert } from 'assert'
 import Sticker, { extractMetadata, StickerTypes } from '../src'
-import sizeOf from 'image-size'
+import sharp from 'sharp'
 
 const images = {
     static: {
@@ -28,7 +28,7 @@ describe('Sticker', () => {
                 type: StickerTypes.CROPPED
             })
             const buffer = await sticker.build()
-            const { height, width } = sizeOf(buffer)
+            const { height, width } = await sharp(buffer).metadata()
             assert.equal(height, 512)
             assert.equal(width, 512)
         })
@@ -38,7 +38,7 @@ describe('Sticker', () => {
                 type: StickerTypes.FULL
             })
             const buffer = await sticker.build()
-            const { height, width } = sizeOf(buffer)
+            const { height, width } = await sharp(buffer).metadata()
             assert.equal(height, width)
         })
 
@@ -47,7 +47,7 @@ describe('Sticker', () => {
                 type: StickerTypes.CIRCLE
             })
             const buffer = await sticker.build()
-            const { height, width } = sizeOf(buffer)
+            const { height, width } = await sharp(buffer).metadata()
             assert.equal(height, width)
         })
 
@@ -56,7 +56,7 @@ describe('Sticker', () => {
                 type: StickerTypes.ROUNDED
             })
             const buffer = await sticker.build()
-            const { height, width } = sizeOf(buffer)
+            const { height, width } = await sharp(buffer).metadata()
             assert.equal(height, width)
         })
     })
@@ -73,7 +73,7 @@ describe('Sticker', () => {
                 type: StickerTypes.CROPPED
             })
             const buffer = await sticker.build()
-            const { height, width } = sizeOf(buffer)
+            const { height, width } = await sharp(buffer).metadata()
             assert.equal(height, 512)
             assert.equal(width, 512)
         })
@@ -83,7 +83,7 @@ describe('Sticker', () => {
                 type: StickerTypes.CIRCLE
             })
             const buffer = await sticker.build()
-            const { height, width } = sizeOf(buffer)
+            const { height, width } = await sharp(buffer).metadata()
             assert.equal(height, 512)
             assert.equal(width, 512)
         })
@@ -93,7 +93,7 @@ describe('Sticker', () => {
                 type: StickerTypes.ROUNDED
             })
             const buffer = await sticker.build()
-            const { height, width } = sizeOf(buffer)
+            const { height, width } = await sharp(buffer).metadata()
             assert.equal(height, 512)
             assert.equal(width, 512)
         })
@@ -103,7 +103,7 @@ describe('Sticker', () => {
                 type: StickerTypes.FULL
             })
             const buffer = await sticker.build()
-            const { height, width } = sizeOf(buffer)
+            const { height, width } = await sharp(buffer).metadata()
             assert.equal(height, width)
         })
 
