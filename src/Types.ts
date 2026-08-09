@@ -1,4 +1,4 @@
-import sharp, { Color, WebpOptions } from 'sharp'
+import { Color, WebpOptions } from 'sharp'
 import { StickerTypes } from './internal/Metadata/StickerTypes'
 
 /** Sticker metadata config */
